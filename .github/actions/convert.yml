@@ -1,0 +1,18 @@
+name: Convert Pandoc to HTML
+
+on: push
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: mkdir dist
+      - uses: docker://pandoc/latex:2.9
+        with: # needs a README in your repo root!
+          args: "--standalone --output=dist/index.html src/index.md"
+      - uses: netlify/actions/cli@master
+        with:
+          name: dist
+          path: dist
+          args: --help
