@@ -15,4 +15,4 @@ jobs:
         with:
           name: dist
           path: dist
-          args: --help
+          args: deploy
