@@ -1,3 +1,3 @@
 # Hello World
 
-Hello world, this is the world's fastest blog! 3
+Hello world, this is the world's fastest blog! 4
